@@ -1,0 +1,549 @@
+/* Estilos Base y Reset */
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #0d47a1;
+  --accent-color: #fbc02d;
+  --text-color: #333;
+  --light-text: #777;
+  --white: #fff;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Top Bar */
+.top-bar {
+  background: var(--primary-color);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-bar a {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .top-bar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), */
+  /* url("assets/images/hero-bg.webp"); */
+  background: blue;
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-section p {
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctor-info {
+  padding: 20px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.doctor-info a {
+  color: white;
+  margin-left: 70px;
+}
+
+.doctor-info strong {
+  border-radius: 8px;
+  padding: 2px 15px 2px 15px;
+  background: #ffff;
+  color: #1a73e8;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.doctor-info span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fa-map-marker-alt {
+  font-size: 3rem;
+}
+
+.fa-google {
+  font-size: 3rem;
+}
+.asd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btn-whatsapp:hover {
+  background: #128c7e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Services Section */
+.services-section {
+  margin-top: -50px;
+  width: 1250px;
+
+  /* background: var(--light-bg); */
+}
+
+.services-section .container > .row {
+  --bs-gutter-x: 0;
+}
+
+.service-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.service-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.service-box h4 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 0;
+  }
+
+  .service-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* Specialist Section */
+.specialist-section {
+  padding: 60px 0;
+}
+
+.specialist-section h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .specialist-section {
+    padding: 40px 0;
+  }
+}
+
+/* Consultation Section */
+.consultation-section {
+  padding: 60px 0;
+}
+
+.consultation-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consultation-list i {
+  color: var(--primary-color);
+  margin-top: 3px;
+}
+
+.location-box {
+  background: blue;
+  padding: 30px;
+  border-radius: 8px;
+  height: 100%;
+  color: white;
+}
+
+.location-box h4 {
+  margin-bottom: 15px;
+}
+
+.badge {
+  color: white;
+  background: #ffff;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .consultation-section {
+    padding: 40px 0;
+  }
+
+  .location-box {
+    margin-top: 30px;
+  }
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 60px 0;
+  background: blue;
+  /* color:white */
+  /* background: var(--light-bg); */
+}
+
+.review-box {
+  /* background: var(--white); */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.review-box i.fa-user-circle {
+  font-size: 40px;
+  color: var(--light-text);
+}
+
+.review-text .stars {
+  color: var(--accent-color);
+  margin: 5px 0;
+}
+
+.google-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 40px 0;
+  }
+}
+
+/* Solutions Section */
+.solutions-section {
+  padding: 60px 0;
+}
+
+.solution-box {
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.solution-box img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.solution-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 40px 0;
+  }
+}
+
+/* Doctor Section */
+.doctor-section {
+  padding: 60px 0;
+  background: var(--light-bg);
+}
+
+.doctor-img {
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .doctor-section {
+    padding: 40px 0;
+  }
+
+  .doctor-img {
+    margin-bottom: 30px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 40px 0;
+}
+
+.achievement-box {
+  padding: 20px;
+}
+
+.achievement-box i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Appointment Section */
+.appointment-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.appointment-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-call:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.locations {
+  margin-top: 40px;
+}
+
+.txt-withe {
+  color: white;
+}
+
+.location-box {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.location-box i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .appointment-section {
+    padding: 40px 0;
+  }
+
+  .appointment-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-whatsapp:hover {
+  background: #128c7e;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .floating-whatsapp {
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--dark-bg);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--accent-color);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Clases utilitarias */
+.mt-3 {
+  margin-top: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.my-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.text-warning {
+  color: var(--accent-color);
+}
+.rounded {
+  border-radius: 8px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Efectos de hover generales */
+a:hover,
+button:hover {
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.img-logo {
+  width: 250px;
+}

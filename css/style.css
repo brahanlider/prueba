@@ -1,7 +1,9 @@
 /* Estilos Base y Reset */
 :root {
-  --primary-color: #1a73e8;
-  --secondary-color: #0d47a1;
+  --primary-color: #0b3158;
+  --secondary-color: #0f5495;
+  --tercer-color: #35dc8a;
+
   --accent-color: #fbc02d;
   --text-color: #333;
   --light-text: #777;
@@ -97,11 +99,9 @@ a {
   }
 }
 
-/* Hero Section */
 .hero-section {
   /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), */
-  /* url("assets/images/hero-bg.webp"); */
-  background: blue;
+  background: var(--secondary-color);
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -190,16 +190,32 @@ a {
   }
 }
 
-/* Services Section */
 .services-section {
-  margin-top: -50px;
-  width: 1250px;
-
-  /* background: var(--light-bg); */
+  width: 95%;
+  max-width: 1250px;
+  position: relative;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: -30px;
+  z-index: 2;
 }
 
-.services-section .container > .row {
-  --bs-gutter-x: 0;
+.services-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    margin-top: 20px;
+    margin-bottom: -30px;
+    padding: 15px;
+  }
+
+  .service-box {
+    margin-bottom: 15px;
+  }
 }
 
 .service-box {
@@ -268,7 +284,7 @@ a {
 }
 
 .location-box {
-  background: blue;
+  background: var(--primary-color);
   padding: 30px;
   border-radius: 8px;
   height: 100%;
@@ -281,8 +297,12 @@ a {
 
 .badge {
   color: white;
-  background: #ffff;
+  /* background: var(--tercer-color); */
   margin-bottom: 15px;
+}
+.btn-verde {
+  background: var(--tercer-color);
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -298,7 +318,7 @@ a {
 /* Reviews Section */
 .reviews-section {
   padding: 60px 0;
-  background: blue;
+  background: var(--secondary-color);
   /* color:white */
   /* background: var(--light-bg); */
 }
